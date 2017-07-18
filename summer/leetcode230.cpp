@@ -1,4 +1,11 @@
-//给当一个二叉搜索树。写一个程序来查找其中的第K个最小元素
+/*Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+*Note:
+*You may assume k is always valid, 1 ? k ? BST's total elements.
+*Follow up :
+*What if the BST is modified(insert / delete operations) often and you need to find the kth smallest frequently ? 
+*How would you optimize the kthSmallest routine ?
+*/
+
 #include <iostream>
 #include <vector>
 #include<stack>
@@ -9,7 +16,7 @@ struct  TreeNode
 	int val;
 	TreeNode *left;
 	TreeNode *right;
-	TreeNode(int x):val(x),left(NULL),right(NULL){}
+	TreeNode(int x):val(x),left(NULL),right(NULL){}	//初始化支持 TreeNode（int x）这种方式，即 把x赋给val，left和right赋值NULL。
 };
 
 
@@ -18,19 +25,19 @@ public:
 	int kthSmallest(TreeNode *root,int k) {
 		int result = 0;
 		int index = 0;
+		if (k < 1)
+			return -1;
 		InOrder(root, k, index, result);
 		return result;
 	}
 
-private:
 	void InOrder(TreeNode *root, int k, int &index, int &result) {
 		if (root) {
 			InOrder(root->left, k, index, result);
 			++index;
-			if (index == k) {
+			if (index == k) 
 				result = root->val;
-			}
-				InOrder(root->right, k, index, result);
+			InOrder(root->right, k, index, result);
 		}
 	}
 };
@@ -43,8 +50,8 @@ public:
 
 	int InOrder(TreeNode *root, int &k) {
 		if (!root) 
-			return -1;
-		int val = InOrder(root->left, k);
+			return -1;	//根节点为空时，返回-1
+		int val = InOrder(root->left, k);	//中序遍历左子树
 		if (!k) 
 			return val;
 		if (!--k) 
@@ -53,20 +60,18 @@ public:
 	}
 };
 
-class Solution3 {	//非递归方法
+class Solution3 {	//非递归方法：
 public:
 	int kthSmallest(TreeNode *root, int k) {
 		int index = 0;
 		TreeNode *cur = root;
 		stack<TreeNode*> s;
-		while (cur || !s.empty())
-		{
-			while (cur)
-			{
+		while (cur || !s.empty()){
+			while (cur){
 				s.push(cur);
 				cur = cur->left;
 			}
-			cur = s.top();
+			cur = s.top();	//返回栈顶元素
 			s.pop();
 			index++;
 			if (index == k)
