@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClCompile Include="leetcode230.cpp" />
     <ClCompile Include="TaskScheduler .cpp" />
+    <ClCompile Include="UniquePaths.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
