@@ -146,8 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="demo.cpp" />
     <ClCompile Include="leetcode230.cpp" />
     <ClCompile Include="TaskScheduler .cpp" />
+    <ClCompile Include="TrappingRainWater .cpp" />
     <ClCompile Include="UniquePaths.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
