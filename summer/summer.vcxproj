@@ -146,8 +146,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ac1003.cpp" />
+    <ClCompile Include="AddTwoNumbers.cpp" />
+    <ClCompile Include="BinaryTreeRightSideView .cpp" />
+    <ClCompile Include="BTS.cpp" />
     <ClCompile Include="demo.cpp" />
     <ClCompile Include="leetcode230.cpp" />
+    <ClCompile Include="Mineswepper.cpp" />
     <ClCompile Include="TaskScheduler .cpp" />
     <ClCompile Include="TrappingRainWater .cpp" />
     <ClCompile Include="TwoSum.cpp" />

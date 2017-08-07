@@ -17,6 +17,8 @@
 //		cout << *iter << " ";
 //	}
 //	cout << endl;
+//
+//
 //	//第二种方式
 //	vector<int> v2(v1);
 //	cout << "第二种方式的输出结果：" << endl;
@@ -25,6 +27,8 @@
 //		cout << *iter << " ";
 //	}
 //	cout << endl;
+//
+//
 //	//第三种方式
 //	vector<int> v3(3);
 //	cout << "第三种方式的输出结果：" << endl;
