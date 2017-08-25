@@ -51,5 +51,11 @@
     <ClCompile Include="ac1003.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SortCharactersByFrequency .cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Repeated DNA Sequences .cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
