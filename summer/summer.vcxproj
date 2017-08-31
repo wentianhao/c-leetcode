@@ -154,6 +154,7 @@
     <ClCompile Include="leetcode230.cpp" />
     <ClCompile Include="Mineswepper.cpp" />
     <ClCompile Include="Repeated DNA Sequences .cpp" />
+    <ClCompile Include="Scramble String .cpp" />
     <ClCompile Include="SortCharactersByFrequency .cpp" />
     <ClCompile Include="TaskScheduler .cpp" />
     <ClCompile Include="TrappingRainWater .cpp" />
